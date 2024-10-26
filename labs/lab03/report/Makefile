@@ -6,13 +6,13 @@ LATEX_FORMAT =
 FILTER = --filter pandoc-crossref
 
 %.docx: %.md
-  -pandoc "$<" $(FILTER) -o "$@"
+    -pandoc "$<" $(FILTER) -o "$@"
 
 %.pdf: %.md
-  -pandoc "$<" $(LATEX_FORMAT) $(FILTER) -o "$@"
+    -pandoc "$<" $(LATEX_FORMAT) $(FILTER) -o "$@"
 
 all: $(FILES)
-  @echo $(FILES)
+    @echo $(FILES)
 
 clean:
-  -rm $(FILES) *~
+    -rm $(FILES) *~
